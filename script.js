@@ -1,91 +1,118 @@
 const contents = [
-  "Nothing can hold on unless it puts out a line, and unless that line can tangle with others.",
-  [
-    "images/00f2a0d1b3ab344bcac82476193a3457.jpeg",
-    "images/1f0f49cd74782109c6a02abbcf88ed0a.jpeg",
-    "images/sample3.jpg",
-    "images/sample4.jpg",
-  ], // Kolaj olarak gösterilecek resim dizisi
-  `<video autoplay loop muted>
-    <source src="videos/sample1.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>`,
-  "Blobs have volume, mass, density.",
-  `<video autoplay loop muted>
-    <source src="videos/sample2.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>`,
-  "The line bears out the contrary principle of deterritorialization.",
+  {
+    type: "text",
+    content:
+      "This project focuses on pluralistically revitalizing the complex interactions and intersections between human, technology, and environment by using the concepts of 'thread' and 'trace' as metaphors. It is based on transforming the archaeology of weaving and computer technologies and the cartography of the environments they create into a narrative form. In doing so, it aims to reconsider entrenched power structures and dominant narratives.",
+    position: { top: "8%", left: "1%" },
+    size: { width: "20%", height: "auto" },
+  },
+  {
+    type: "gif",
+    content: "images/sample.gif",
+    position: { top: "8%", left: "21.5%" },
+    size: { width: "10%", height: "auto" },
+  },
+  {
+    type: "text",
+    content:
+      "As a convergence point of the research I have conducted during this process, I place 'thread' at the center of this study. This is because the concept of 'thread' encompasses many meanings related to the recording of environment, technology, and memory.",
+    position: { top: "45%", left: "22%" },
+    size: { width: "10%", height: "auto" },
+  },
+  {
+    type: "image",
+    content: "images/Screen Shot 2022-06-11 at 15.28.08.png",
+    position: { top: "60%", left: "20%" },
+    size: { width: "5%", height: "auto" },
+  },
+  {
+    type: "text",
+    content:
+      "Nothing can hold on unless it puts out a line, and unless that line can tangle with others.",
+    position: { top: "30%", left: "25%" },
+    size: { width: "10%", height: "auto" },
+  },
+  {
+    type: "image",
+    content: "images/Screen Shot 2023-02-13 at 16.25.36.png",
+    position: { top: "30%", left: "12%" },
+    size: { width: "10%", height: "auto" },
+  },
+  {
+    type: "text",
+    content: "the rope is always in process like social life itself",
+    position: { top: "30%", left: "35%" },
+    size: { width: "10%", height: "auto" },
+  },
+  {
+    type: "image",
+    content: "images/Screen Shot 2023-02-13 at 16.08.22.png",
+    position: { top: "40%", left: "5%" },
+    size: { width: "10%", height: "auto" },
+  },
+  {
+    type: "text",
+    content: "not elementary components but ever-extending lines",
+    position: { top: "70%", left: "35%" },
+    size: { width: "10%", height: "auto" },
+  },
+  {
+    type: "text",
+    content: "They can expand and contract, encroach and retrench.",
+    position: { top: "70%", left: "1.5%" },
+    size: { width: "10%", height: "auto" },
+  },
+  {
+    type: "video",
+    content: "videos/sample1.mp4",
+    position: { top: "50%", left: "20%" },
+    size: { width: "20%", height: "auto" },
+  },
 ];
 
-let currentIndex = 0; // Şu anda gösterilen elemanın dizini
-const mainText = document.getElementById("main-text");
+const container = document.getElementById("content-container");
 
-// Kolajı Göster
-function createCollage(images) {
-  mainText.innerHTML = ""; // Önceki içeriği temizle
+contents.forEach((item) => {
+  const block = document.createElement("div");
+  block.classList.add("content-block");
 
-  images.forEach((image, index) => {
-    const imgElement = document.createElement("img");
-    imgElement.src = image; // Resim kaynağı
-    imgElement.style.position = "absolute";
-    imgElement.style.top = `${10 + Math.random() * 50}%`; // Ekranın üst kısmına yakın
-    imgElement.style.left = `${10 + Math.random() * 50}%`; // Ekranın sol kısmına yakın
-    imgElement.style.zIndex = index; // Üst üste binme sırası
-    imgElement.style.opacity = `${0.7 + Math.random() * 0.3}`; // Şeffaflık
-    imgElement.style.transform = `rotate(${Math.random() * 10 - 5}deg)`; // Döndürme
-    imgElement.style.width = `${30 + Math.random() * 20}%`; // Dinamik boyutlar
+  // Pozisyon ve boyut belirleme
+  block.style.position = "absolute";
+  block.style.top = item.position.top;
+  block.style.left = item.position.left;
+  block.style.width = item.size.width;
+  block.style.height = item.size.height;
 
-    console.log("Appending image:", image); // Konsola görüntüleme
-    mainText.appendChild(imgElement); // Resmi DOM'a ekle
-  });
-}
+  // Taşmayı engelleme
+  const left = parseFloat(item.position.left.replace("%", ""));
+  const top = parseFloat(item.position.top.replace("%", ""));
+  const width = parseFloat(item.size.width.replace("%", ""));
+  const screenWidth = 100; // Ekranın % birimi genişliği
+  const screenHeight = 100; // Ekranın % birimi yüksekliği
 
-// İçeriği Güncelle
-function updateContent() {
-  const content = contents[currentIndex];
-
-  if (Array.isArray(content)) {
-    createCollage(content); // Kolaj göster
-  } else {
-    mainText.innerHTML = content.startsWith("<video")
-      ? content // Video
-      : `<p>${content}</p>`; // Metin
-  }
-}
-
-// Scroll Hareketini Dinle
-function handleScroll(event) {
-  const delta = event.deltaY || -event.wheelDelta || event.detail;
-
-  if (delta > 0 && currentIndex < contents.length - 1) {
-    currentIndex++; // Bir sonraki içeriğe geç
-  } else if (delta < 0 && currentIndex > 0) {
-    currentIndex--; // Bir önceki içeriğe geç
+  if (left + width > screenWidth) {
+    const overflow = left + width - screenWidth;
+    block.style.left = `${left - overflow}%`;
   }
 
-  updateContent();
-}
+  if (top > screenHeight) {
+    block.style.top = `${screenHeight - 10}%`;
+  }
 
-// Mobil için Touch Hareketleri
-let touchStartY = 0;
-window.addEventListener("touchstart", (event) => {
-  touchStartY = event.touches[0].clientY;
+  // İçeriği ekleme
+  if (item.type === "text") {
+    block.innerHTML = `<p>${item.content}</p>`;
+  } else if (item.type === "image") {
+    block.innerHTML = `<img src="${item.content}" alt="Image Content" />`;
+  } else if (item.type === "video") {
+    block.innerHTML = `
+      <video controls>
+        <source src="${item.content}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>`;
+  } else if (item.type === "gif") {
+    block.innerHTML = `<img src="${item.content}" alt="GIF Content" />`; // GIF için img etiketi
+  }
+
+  container.appendChild(block);
 });
-window.addEventListener("touchend", (event) => {
-  const touchEndY = event.changedTouches[0].clientY;
-  const delta = touchStartY - touchEndY;
-
-  if (Math.abs(delta) > 30) {
-    if (delta > 0 && currentIndex < contents.length - 1) {
-      currentIndex++;
-    } else if (delta < -30 && currentIndex > 0) {
-      currentIndex--;
-    }
-    updateContent();
-  }
-});
-
-// Scroll Olaylarını Dinle
-window.addEventListener("wheel", handleScroll); // Fare kaydırma
-updateContent(); // Başlangıç durumu
