@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 🚀 Geri Dönme Linki -->
+    <a href="index.html" class="back-link">← Back to Home</a>
+
+    <div class="container">
+        <h1>Archive</h1>
+
+        <!-- About Bölümü -->
+        <p class="about-text">
+            The Library contains a collection of readings and research materials related to the Meshwork project.
+            Here you will find resources on weaving, technology, cybernetics, archaeology, and more.
+        </p>
+
+        <!-- Kategoriler -->
+        <ul class="category-list">
+            <li data-category="movies" onclick="toggleCategory('movies')">
+                <img src="images/folder.png" class="folder-icon"> Movies
+            </li>
+            <li data-category="relics" onclick="toggleCategory('relics')">
+                <img src="images/folder.png" class="folder-icon"> Relics
+            </li>
+            <li data-category="maps" onclick="toggleCategory('maps')">
+                <img src="images/folder.png" class="folder-icon"> Maps
+            </li>
+        </ul>
+
+        <!-- İçerik Alanı -->
+        <div class="content-area" id="movies-content"></div>
+        <div class="content-area" id="relics-content"></div>
+        <div class="content-area" id="maps-content"></div>
+
+        <!-- Hover Görseli -->
+        <img id="category-preview" src="" alt="Preview Image">
+
+    </div>
+
+    <script src="archive.js"></script>
+</body>
+
+</html>

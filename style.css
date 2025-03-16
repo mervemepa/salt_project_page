@@ -1,44 +1,379 @@
-/* Genel Stil */
-body {
-  margin: 0;
+.category-list {
+  list-style: none;
   padding: 0;
-  font-family: 'Miriam Libre', sans-serif;
-  background-color: #FFFFFF;
-  color: #000000;
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  /* Sayfa taşmalarını gizle */
+  margin-bottom: 20px;
 }
 
-#content-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
+.category-list li {
+  margin: 5px 0;
 }
 
-.content-block {
-  position: absolute;
-  /* Manuel konumlandırma için */
-  border: 1px solid #ccc;
-  background-color: #f9f9f9;
-  /*box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  /* Taşan içeriği gizler */
+.category-list a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.content-block img,
-.content-block video {
-  width: 100%;
-  /* Blok genişliğine uyum sağlar */
-  height: 100%;
-  /* Blok yüksekliğine uyum sağlar */
+.category-list a:hover {
+  color: blue;
 }
 
-.content-block p {
-  margin: 0;
-  font-size: 1rem;
+.folder-icon {
+  width: 20px;
+  height: auto;
+  vertical-align: middle;
+}
+
+.about-text {
+  font-size: 14px;
   line-height: 1.5;
-  text-align: justify;
+  color: #444;
+  margin-bottom: 15px;
+  font-style: italic;
 }
+
+.back-link {
+  display: block;
+  margin-bottom: 15px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #000;
+}
+
+.back-link:hover {
+  color: blue;
+}
+
+.about-text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #444;
+  margin-bottom: 15px;
+  font-style: italic;
+}.archive-item {
+  margin-bottom: 20px;
+}
+
+.video-description {
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+.category-buttons {
+  margin-bottom: 15px;
+}
+
+.category-buttons button {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  margin-right: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.category-buttons button:hover {
+  background-color: #ddd;
+}
+
+.archive-item {
+  margin-bottom: 20px;
+}
+
+.video-description {
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+.archive-category {
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+}
+
+.archive-category:hover {
+  background-color: #ddd;
+}
+
+.content-area {
+  display: none;
+  padding: 10px;
+  margin-left: 15px;
+  border-left: 2px solid #ddd;
+}
+
+.archive-item {
+  margin-bottom: 20px;
+}
+
+.video-description {
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+.category-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.category-list li {
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 5px 0;
+}
+
+.category-list li:hover {
+  color: blue;
+}
+
+.folder-icon {
+  width: 20px;
+  height: auto;
+  vertical-align: middle;
+}
+
+.content-area {
+  display: none;
+  padding: 10px;
+  margin-left: 30px;
+  border-left: 2px solid #ddd;
+}
+
+.archive-item {
+  margin-bottom: 20px;
+}
+
+.video-description {
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+.category-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.category-list li {
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 5px 0;
+}
+
+.category-list li:hover {
+  color: blue;
+}
+
+.folder-icon {
+  width: 20px;
+  height: auto;
+  vertical-align: middle;
+}
+
+.content-area {
+  display: none;
+  padding: 10px;
+  margin-left: 30px;
+  border-left: 2px solid #ddd;
+}
+
+.archive-item {
+  margin-bottom: 20px;
+}
+
+.video-description {
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+.archive-item {
+  margin-bottom: 20px;
+}
+
+.video-description,
+.sketchfab-description {
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+iframe {
+  max-width: 100%;
+  border: none;
+}
+
+.category-description {
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 15px;
+  color: #333;
+  padding: 5px 0;
+}
+
+/* 📂 Kategori Listesi */
+.category-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.category-list li {
+  margin: 5px 0;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.category-list li:hover {
+  color: blue;
+}
+
+/* 📂 Folder İkonu */
+.folder-icon {
+  width: 20px;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* 📌 Hover Görseli */
+/* 📌 Hover Görseli */
+#category-preview {
+  position: absolute;
+  width: 300px;
+  /* Daha büyük genişlik */
+  height: auto;
+  display: none;
+  border: 2px solid #ccc;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  padding: 8px;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1000;
+  /* Üstte kalmasını sağlar */
+}
+
+
+
+/* 📝 About Bölümü */
+.about-text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #444;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+/* 🔙 Geri Dönüş Linkleri */
+.back-link {
+  display: block;
+  margin-bottom: 15px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #000;
+}
+
+.back-link:hover {
+  color: blue;
+}
+
+/* 🎞️ Arşiv İçerik Kutuları */
+.archive-item {
+  margin-bottom: 20px;
+}
+
+/* 🎥 Video Açıklamaları */
+.video-description,
+.sketchfab-description {
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+/* 📂 Arşiv Kategorileri */
+.archive-category {
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+}
+
+.archive-category:hover {
+  background-color: #ddd;
+}
+
+/* 📌 İçerik Alanı */
+.content-area {
+  display: none;
+  padding: 10px;
+  margin-left: 30px;
+  border-left: 2px solid #ddd;
+}
+
+/* 🗂️ PDF Listesi İçin Eklenen Kısım ✅ */
+#pdf-list {
+  display: block !important;
+  visibility: visible !important;
+  height: auto !important;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* 📝 PDF Linkleri */
+#pdf-list a {
+  display: block;
+  color: #007BFF;
+  text-decoration: none;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+#pdf-list a:hover {
+  color: blue;
+}
+
+/* 📌 Maps Görselleri */
+.map-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+}
+
+.map-description {
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+  margin-top: 5px;
+}
+
