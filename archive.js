@@ -46,18 +46,33 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
+    // **Eğer içerik açıksa kapat**
     if (contentDiv.style.display === "block") {
       contentDiv.style.display = "none";
       contentDiv.innerHTML = "";
       return;
     }
 
+    // **Önce tüm içerikleri kapat**
     document.querySelectorAll(".content-area").forEach((div) => {
       div.style.display = "none";
       div.innerHTML = "";
     });
 
+    // **Seçilen kategoriyi aç**
     contentDiv.style.display = "block";
-    contentDiv.innerHTML = `<p>Loading ${category} content...</p>`;
+
+    // **Movies Kategorisi İçin Özel İçerik**
+    if (category === "movies") {
+      contentDiv.innerHTML = `
+        <h2>Movies Database</h2>
+        <iframe src="https://docs.google.com/spreadsheets/d/1q_YC5RLHH0I4RrSuGeOKpPKoSkZtGslfjhjEol8jIUE/edit?usp=sharing" 
+                width="100%" height="600px"></iframe>
+      `;
+    }
+    // **Diğer Kategoriler İçin Placeholder İçerik**
+    else {
+      contentDiv.innerHTML = `<p>Loading ${category} content...</p>`;
+    }
   };
 });
