@@ -77,6 +77,12 @@ document.addEventListener("DOMContentLoaded", function () {
       <iframe src="https://docs.google.com/spreadsheets/d/1uYlVo2k53yqdru6mltIb1fgXbqPqrMGNsHfZopzWvSk/edit?usp=sharing" 
               width="100%" height="600px"></iframe>
     `;
+    } else if (category === "maps") {
+      contentDiv.innerHTML = `
+      <h2>Maps Database</h2>
+      <iframe src="https://docs.google.com/spreadsheets/d/1RrIIHw6e--Pi7P3R8ATIFRoBml99BIrA-gFUJ9OQMpY/edit?usp=sharing" 
+              width="100%" height="600px"></iframe>
+    `;
     }
     // **Diğer Kategoriler İçin Placeholder İçerik**
     else {
