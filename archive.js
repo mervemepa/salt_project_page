@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const categoryImages = {
-    movies: "assets/archive/movies/movies_preview.jpg",
+    movies: "assets/archive/movies_preview.jpg",
     relics: "assets/archive/relics/relics_preview.jpg",
     maps: "assets/archive/maps/maps_preview.jpg",
     stations: "assets/archive/stations/stations_preview.jpg",
