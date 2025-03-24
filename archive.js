@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
     movies: "assets/archive/movies/movies_preview.jpg",
     relics: "assets/archive/relics/relics_preview.jpg",
     maps: "assets/archive/maps/maps_preview.jpg",
+    stations: "assets/archive/stations/stations_preview.jpg",
+    cables: "assets/archive/cables/cables_preview.jpg",
   };
 
   function showCategoryImage(event, category) {
