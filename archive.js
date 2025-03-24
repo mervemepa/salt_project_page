@@ -71,6 +71,12 @@ document.addEventListener("DOMContentLoaded", function () {
         <iframe src="https://docs.google.com/spreadsheets/d/1q_YC5RLHH0I4RrSuGeOKpPKoSkZtGslfjhjEol8jIUE/edit?usp=sharing" 
                 width="100%" height="600px"></iframe>
       `;
+    } else if (category === "relics") {
+      contentDiv.innerHTML = `
+      <h2>Relics Database</h2>
+      <iframe src="https://docs.google.com/spreadsheets/d/1uYlVo2k53yqdru6mltIb1fgXbqPqrMGNsHfZopzWvSk/edit?usp=sharing" 
+              width="100%" height="600px"></iframe>
+    `;
     }
     // **Diğer Kategoriler İçin Placeholder İçerik**
     else {

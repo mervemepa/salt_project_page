@@ -2,14 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Archive</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-
     <!-- 🚀 Geri Dönme Linki -->
     <a href="index.html" class="back-link">← Back to Home</a>
 
@@ -24,39 +23,41 @@
         <!-- Kategoriler -->
         <ul class="category-list">
             <li data-category="movies" onclick="toggleCategory('movies')">
-                <img src="images/folder.png" class="folder-icon"> Movies
+                <img src="images/folder.png" class="folder-icon" /> Movies
             </li>
             <li data-category="relics" onclick="toggleCategory('relics')">
-                <img src="images/folder.png" class="folder-icon"> Relics
+                <img src="images/folder.png" class="folder-icon" /> Relics
             </li>
             <li data-category="maps" onclick="toggleCategory('maps')">
-                <img src="images/folder.png" class="folder-icon"> Maps
+                <img src="images/folder.png" class="folder-icon" /> Maps
             </li>
             <li data-category="stations" onclick="toggleCategory('stations')">
-                <img src="images/folder.png" class="folder-icon"> Stations
+                <img src="images/folder.png" class="folder-icon" /> Stations
             </li>
             <li data-category="cables" onclick="toggleCategory('cables')">
-                <img src="images/folder.png" class="folder-icon"> Cables
+                <img src="images/folder.png" class="folder-icon" /> Cables
             </li>
         </ul>
 
-        <!-- İçerik Alanı (Varsayılan olarak gizli) -->
+        <!-- İçerik Alanı -->
         <div class="content-area" id="movies-content" style="display: none;">
             <h2>Movies Database</h2>
-            <iframe src="https://docs.google.com/spreadsheets/d/1q_YC5RLHH0I4RrSuGeOKpPKoSkZtGslfjhjEol8jIUE/edit?usp=sharing"
+            <iframe src="https://docs.google.com/spreadsheets/d/1q_YC5RLHH0I4RrSuGeOKpPKoSkZtGslfjhjEol8jIUE/preview"
                 width="100%" height="600px"></iframe>
         </div>
-        <div class="content-area" id="relics-content" style="display: none;"></div>
+
+        <div class="content-area" id="relics-content" style="display: none;">
+            <h2>Relics Database</h2>
+            <iframe src="https://docs.google.com/spreadsheets/d/1uYlVo2k53yqdru6mltIb1fgXbqPqrMGNsHfZopzWvSk/preview"
+                width="100%" height="600px"></iframe>
+        </div>
+
         <div class="content-area" id="maps-content" style="display: none;"></div>
-        <div class="content-area" id="movies-content" style="display: none;"></div>
         <div class="content-area" id="stations-content" style="display: none;"></div>
         <div class="content-area" id="cables-content" style="display: none;"></div>
 
-
-
         <!-- Hover Görseli -->
-        <img id="category-preview" src="" alt="Preview Image">
-
+        <img id="category-preview" src="" alt="Preview Image" />
     </div>
 
     <script src="archive.js"></script>
