@@ -83,6 +83,18 @@ document.addEventListener("DOMContentLoaded", function () {
       <iframe src="https://docs.google.com/spreadsheets/d/1RrIIHw6e--Pi7P3R8ATIFRoBml99BIrA-gFUJ9OQMpY/edit?usp=sharing" 
               width="100%" height="600px"></iframe>
     `;
+    } else if (category === "stations") {
+      contentDiv.innerHTML = `
+      <h2>Stations Database</h2>
+      <iframe src="https://docs.google.com/spreadsheets/d/1IzuLGg5BLltkdORalYLIQ_1tDYuvw8ip2Kffu5kgQzY/edit?usp=sharing" 
+              width="100%" height="600px"></iframe>
+    `;
+    } else if (category === "cables") {
+      contentDiv.innerHTML = `
+      <h2>Cables Database</h2>
+      <iframe src="https://docs.google.com/spreadsheets/d/1cguqIslLIUATTmj9puUMu6bXJpGPmHY1qK5XLFFDdS8/edit?usp=sharing" 
+              width="100%" height="600px"></iframe>
+    `;
     }
     // **Diğer Kategoriler İçin Placeholder İçerik**
     else {
