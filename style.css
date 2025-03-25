@@ -189,6 +189,36 @@ a,
   margin-bottom: 5px;
 }
 
+.news-item {
+  margin-bottom: 25px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+}
+
+.news-item h3 a {
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+}
+
+.news-item h3 a:hover {
+  color: blue;
+}
+
+.news-description {
+  font-size: 14px;
+  color: #333;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+.news-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+}
+
 /* 📌 Google Spreadsheet İçin */
 #movies-content {
   margin-top: 20px;
