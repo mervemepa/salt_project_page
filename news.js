@@ -6,17 +6,19 @@ document.addEventListener("DOMContentLoaded", function () {
     <div class="news-item">
       <h3>
         <a href="https://saltonline.org/en/2853/sergi-ali-taptik-merve-mepa-asli-uludag?home" target="_blank">
-          Sergi: Ali Taptık, Merve Mepa, Aslı Uludağ
+          Exhibition: Ali Taptık, Merve Mepa, Aslı Uludağ
         </a>
       </h3>
       <p class="news-description">
-        <strong>SALT Galata</strong> — 19 Mart – 15 Haziran 2025<br/>
-        <em>SALT Sanatsal Araştırma ve Üretim Destek Programı kapsamında gerçekleştirilen sergi.</em>
+        <em>Salt Artistic Research and Production Grant Program</em>
+        <strong>SALT Galata</strong> — 19 March – 15 June 2025<br/>
+
       </p>
-      <img src="https://saltonline.org/uploads/nodes/2853/ali-taptik-merve-mepa-asli-uludag.jpg" class="news-image" alt="SALT sergisi görseli" />
+      <img src="assets/news/bbva_sergi.jpg" class="news-image" alt="SALT sergisi görseli" />
     </div>
   `,
     },
+
     {
       type: "pdf",
       title: "Print Feature: Weaving Futures",
