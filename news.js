@@ -21,15 +21,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     {
       type: "pdf",
-      title: "Print Feature: Weaving Futures",
+      title: "test",
       url: "assets/news/weaving_futures.pdf",
       source: "Printed Matters",
       date: "Nov 2023",
-    },
-    {
-      type: "image",
-      imageUrl: "assets/news/screenshot_magazine.jpg",
-      description: "Magazine coverage in Visual Studies, 2022",
     },
   ];
 

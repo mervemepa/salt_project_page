@@ -201,15 +201,17 @@ a,
   color: black;
 }
 
-.news-item h3 a:hover {
-  color: blue;
+.news-item h3 {
+  margin-bottom: 8px;
+  /* Başlık ile açıklama arasına boşluk */
 }
 
 .news-description {
   font-size: 14px;
   color: #333;
   font-style: italic;
-  margin-top: 5px;
+  margin-bottom: 15px;
+  /* Altındaki görselden de biraz boşluk bırakır */
 }
 
 .news-image {
