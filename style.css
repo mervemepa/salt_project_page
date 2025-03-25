@@ -18,8 +18,16 @@ a,
 .about-text,
 .category-description {
   font-family: 'MiriamFixedFont', monospace, sans-serif;
+  max-width: 40vw;
+    /* Sayfanın ortasına kadar */
+    margin-left: 0;
+    /* Satır başı en solda */
+    padding-left: 0;
+    text-align: left;
+    /* Satırlar sola yaslı */
+    font-size: 14px;
+    line-height: 1.5;
   color: black;
-  margin: 0;
   padding: 0;
 }
 
