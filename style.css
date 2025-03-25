@@ -18,8 +18,14 @@ a,
 .about-text,
 .category-description {
   font-family: 'MiriamFixedFont', monospace, sans-serif;
+  max-width: 40vw;/* Sayfanın ortasına kadar */
+    margin-left: 1px;/* Satır başı en solda */
+    padding-left: 0;
+    text-align: left;
+    /* Satırlar sola yaslı */
+    font-size: 14px;
+    line-height: 1.5;
   color: black;
-  margin: 0;
   padding: 0;
 }
 
@@ -27,6 +33,12 @@ a,
 .category-list {
   list-style: none;
   margin-bottom: 12px;
+  margin-left: 0;
+  /* En sola yasla */
+  padding-left: 0;
+  max-width: 50vw;
+  /* Satır uzunluğu sınırlı */
+  text-align: left;
 }
 
 .category-list li {
@@ -36,6 +48,7 @@ a,
   align-items: center;
   gap: 8px;
   margin: 5px 0;
+  text-align: left;
 }
 
 .category-list li:hover {
@@ -44,7 +57,7 @@ a,
 
 /* 📂 Folder İkonu */
 .folder-icon {
-  width: 14px;
+  width: 36px;
   height: auto;
   vertical-align: middle;
 }
@@ -189,6 +202,39 @@ a,
   margin-bottom: 5px;
 }
 
+.news-item {
+  margin-bottom: 25px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+}
+
+.news-item h3 a {
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+}
+
+.news-item h3 {
+  margin-bottom: 8px;
+  margin-top: 36px;
+  /* Başlık ile açıklama arasına boşluk */
+}
+
+.news-description {
+  font-size: 14px;
+  color: #333;
+  font-style: italic;
+  margin-bottom: 15px;
+  /* Altındaki görselden de biraz boşluk bırakır */
+}
+
+.news-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+}
+
 /* 📌 Google Spreadsheet İçin */
 #movies-content {
   margin-top: 20px;
@@ -198,6 +244,52 @@ a,
 }
 
 #movies-content h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#relics-content {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+#relics-content h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#maps-content {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+#maps-content h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#stations-content {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+#stations-content h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#cables-content {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+#cables-content h2 {
   font-size: 20px;
   margin-bottom: 10px;
 }
