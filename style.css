@@ -212,6 +212,20 @@ body {
   border: 1px solid #ccc;
 }
 
+.board-item {
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+  max-width: 600px;
+}
+
+.board-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
 /* 🖼️ Google Spreadsheet Alanları */
 #movies-content,
 #relics-content,
