@@ -13,11 +13,9 @@ document.addEventListener("DOMContentLoaded", function () {
       previewImage.src = categoryImages[category];
       previewImage.style.display = "block";
 
-      // **Kategori Öğesinin Pozisyonunu Al**
       const categoryRect = event.target.getBoundingClientRect();
       const windowWidth = window.innerWidth;
 
-      // **Görselin Ortanın Sağına Yerleştirilmesi**
       previewImage.style.position = "absolute";
       previewImage.style.top = `${categoryRect.top + window.scrollY}px`;
       previewImage.style.left = `${windowWidth / 2 + 100}px`;
@@ -28,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("category-preview").style.display = "none";
   }
 
-  // **Kategori Listesine Event Listener Ekle**
+  // Hover efekti sadece kategorilere uygulanıyor
   document.querySelectorAll(".category-list li").forEach((item) => {
     const category = item.getAttribute("data-category");
     if (category) {
@@ -38,67 +36,4 @@ document.addEventListener("DOMContentLoaded", function () {
       item.addEventListener("mouseleave", hideCategoryImage);
     }
   });
-
-  // **Kategori İçeriklerini Aç/Kapat**
-  window.toggleCategory = function (category) {
-    const contentDiv = document.getElementById(`${category}-content`);
-
-    if (!contentDiv) {
-      console.error(`HATA: ID '${category}-content' bulunamadı.`);
-      return;
-    }
-
-    // **Eğer içerik açıksa kapat**
-    if (contentDiv.style.display === "block") {
-      contentDiv.style.display = "none";
-      contentDiv.innerHTML = "";
-      return;
-    }
-
-    // **Önce tüm içerikleri kapat**
-    document.querySelectorAll(".content-area").forEach((div) => {
-      div.style.display = "none";
-      div.innerHTML = "";
-    });
-
-    // **Seçilen kategoriyi aç**
-    contentDiv.style.display = "block";
-
-    // **Movies Kategorisi İçin Özel İçerik**
-    if (category === "movies") {
-      contentDiv.innerHTML = `
-        <h2>Movies Database</h2>
-        <iframe src="https://docs.google.com/spreadsheets/d/1q_YC5RLHH0I4RrSuGeOKpPKoSkZtGslfjhjEol8jIUE/edit?usp=sharing" 
-                width="100%" height="600px"></iframe>
-      `;
-    } else if (category === "relics") {
-      contentDiv.innerHTML = `
-      <h2>Relics Database</h2>
-      <iframe src="https://docs.google.com/spreadsheets/d/1uYlVo2k53yqdru6mltIb1fgXbqPqrMGNsHfZopzWvSk/edit?usp=sharing" 
-              width="100%" height="600px"></iframe>
-    `;
-    } else if (category === "maps") {
-      contentDiv.innerHTML = `
-      <h2>Maps Database</h2>
-      <iframe src="https://docs.google.com/spreadsheets/d/1RrIIHw6e--Pi7P3R8ATIFRoBml99BIrA-gFUJ9OQMpY/edit?usp=sharing" 
-              width="100%" height="600px"></iframe>
-    `;
-    } else if (category === "stations") {
-      contentDiv.innerHTML = `
-      <h2>Stations Database</h2>
-      <iframe src="https://docs.google.com/spreadsheets/d/1IzuLGg5BLltkdORalYLIQ_1tDYuvw8ip2Kffu5kgQzY/edit?usp=sharing" 
-              width="100%" height="600px"></iframe>
-    `;
-    } else if (category === "cables") {
-      contentDiv.innerHTML = `
-      <h2>Cables Database</h2>
-      <iframe src="https://docs.google.com/spreadsheets/d/1cguqIslLIUATTmj9puUMu6bXJpGPmHY1qK5XLFFDdS8/edit?usp=sharing" 
-              width="100%" height="600px"></iframe>
-    `;
-    }
-    // **Diğer Kategoriler İçin Placeholder İçerik**
-    else {
-      contentDiv.innerHTML = `<p>Loading ${category} content...</p>`;
-    }
-  };
 });
