@@ -7,28 +7,23 @@
 }
 
 /* 📌 Genel Stil Ayarları */
-body,
-h1,
-h2,
-h3,
-p,
-li,
-a {
+/* 📌 Genel Font Ayarı */
+body {
   font-family: 'MiriamFixedFont', monospace, sans-serif;
   color: black;
-  font-size: 14px;
-  line-height: 1.5;
   margin: 0;
   padding: 0;
-  text-align: left;
-  max-width: 40vw;
-  margin-left: 1px;
 }
 
-/* 📌 Paragraflar */
-.about-text,
-.category-description {
+/* Sadece About Text'e uygulansın */
+.about-text {
+  font-size: 14px;
+  line-height: 1.5;
   font-style: italic;
+  max-width: 40vw;
+  margin-left: 1px;
+  padding-left: 0;
+  text-align: left;
 }
 
 /* 📂 Kategori Listesi */
