@@ -20,6 +20,24 @@ document.addEventListener("DOMContentLoaded", function () {
     },
 
     {
+      type: "custom",
+      content: `
+    <div class="news-item">
+      <h3>
+        <a href="https://sanatokur.com/asli-uludag-ali-taptik-ve-merve-mepa-salt-galatada/" target="_blank">
+          Aslı Uludağ, Ali Taptık ve Merve Mepa SALT Galata'da
+        </a>
+      </h3>
+      <p class="news-description">
+        <strong>Sanat Okur</strong> — Mart 2025<br/>
+        <em>Sergi üzerine yayımlanmış haber, röportaj ve görselleri içerir.</em>
+      </p>
+      <img src="assets/news/sanatokur-cover.jpg" class="news-image" alt="Sanat Okur haber görseli" />
+    </div>
+  `,
+    },
+
+    {
       type: "pdf",
       title: "test",
       url: "assets/news/weaving_futures.pdf",
