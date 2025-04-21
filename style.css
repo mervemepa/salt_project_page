@@ -220,7 +220,7 @@ body {
 }
 
 .board-image {
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
   margin-top: 8px;
   margin-bottom: 8px;
