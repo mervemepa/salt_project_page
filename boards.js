@@ -1,16 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
   const boards = [
     {
-      title: "Sensor Relay Board",
-      image: "assets/boards/relayboard.jpg",
+      title: "Sniffer Oscilloscope",
+      image: "assets/boards/oscilloscope.jpeg",
       pdf: "assets/boards/relayboard-schematic.pdf",
-      ino: "assets/boards/relayboard.ino", // Local dosya örneği
+      github: "https://github.com/mervemepa/sniffer_fans/tree/main", // Local dosya örneği
     },
     {
-      title: "Gesture Interface",
-      image: "assets/boards/gestureboard.jpg",
+      title: "Sniffer Fan Controller",
+      image: "assets/boards/white_led.jpg",
       pdf: "assets/boards/gesture-schematic.pdf",
-      github: "https://github.com/username/gesture-interface", // GitHub link örneği
+      github: "https://github.com/mervemepa/sniffer_fans/tree/main", // GitHub link örneği
     },
     // Yeni board'ları buraya ekleyebilirsin
   ];
@@ -28,8 +28,10 @@ document.addEventListener("DOMContentLoaded", function () {
         <a href="${board.pdf}" target="_blank">📄 Schematic PDF</a><br/>
         ${
           board.ino
-            ? `<a href="${board.ino}" target="_blank">🧠 Arduino Code (.ino)</a>`
-            : `<a href="${board.github}" target="_blank">🔗 GitHub Repository</a>`
+            ? `<a href="${board.ino}" target="_blank"> <img src="assets/images/github_icon.png" alt="GitHub" style="width:20px; vertical-align:middle; margin-right:5px;">
+          GitHub Repository</a>`
+            : `<a href="${board.github}" target="_blank"> <img src="assets/images/github_icon.png" alt="GitHub" style="width:20px; vertical-align:middle; margin-right:5px;">
+          GitHub Repository</a>`
         }
       </p>
     `;
