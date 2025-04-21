@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
       </h3>
       <p class="news-description">
         <strong>Sanat Okur</strong> — Mart 2025<br/>
-        <em>Sergi üzerine yayımlanmış haber, röportaj ve görselleri içerir.</em>
+        <em></em>
       </p>
       <img src="assets/news/sanatokur-cover.jpg" class="news-image" alt="Sanat Okur haber görseli" />
     </div>
