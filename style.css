@@ -20,7 +20,11 @@ body {
   font-size: 14px;
   line-height: 1.5;
   font-style: normal;
+<<<<<<< HEAD
   max-width: 40vw;
+=======
+  max-width: 70vw;
+>>>>>>> 0c9abc6bea050fd3afe928d7020a9769ad776549
   margin-left: 1px;
   padding-left: 0;
   text-align: left;
