@@ -254,18 +254,31 @@ iframe {
 }
 
 .install-image {
-  max-width: 100%;
-  height: auto;
-  margin: 20px 0;
+  display: block;
+  max-width: 90%;
+  margin: 20px auto;
+  /* Ortalar ve boşluk bırakır */
+  padding: 0 5vw;
+  /* Sağ ve sol boşluk */
 }
 
 .video-wrapper {
   position: relative;
-  padding-bottom: 56%;
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
-  margin: 10px 0 5px 0;
-  /* Üstten 10px, alttan 5px boşluk */
+  margin: 20px auto;
+  max-width: 90%;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .install-description,
