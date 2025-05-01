@@ -19,7 +19,7 @@
 
     <!-- About Bölümü -->
   <p class="about-text">
-    Hi, I'm Merve <span class="photo-trigger">[?]</span>
+    Hi, I'm Merve! <span class="photo-trigger">[?]</span>
   </p>
 
     <p class="about-text">
@@ -39,7 +39,8 @@
  
 
     <!-- Kategori Listesi -->
-    <ul class="category-list">
+  <ul class="category-list" id="category-list">
+
     <li><a href="about.html"><img src="assets/images/text-folder.png" class="folder-icon"> TEXT</a></li>
       <li><a href="library.html"><img src="assets/images/pdf-folder.png" class="folder-icon"> Library</a></li>
       <li><a href="archive.html"><img src="assets/images/folder.png" class="folder-icon"> Documents</a></li>
@@ -67,22 +68,22 @@
 </html>
 
 <script>
-  const trigger = document.querySelector(".photo-trigger");
-  const photo = document.getElementById("profile-photo");
+  const triggerElement = document.querySelector('.about-text');
+  const photo = document.createElement('img');
+  photo.src = 'assets/images/merve.jpeg'; // kendi görsel yolun
+  photo.id = 'profile-photo';
+  document.body.appendChild(photo);
 
-  trigger.addEventListener("mouseenter", () => {
-    photo.style.display = "block";
+  const categoryList = document.getElementById('category-list');
+
+  triggerElement.addEventListener('mouseenter', () => {
+    const rect = categoryList.getBoundingClientRect();
+    photo.style.top = `${rect.top + window.scrollY}px`;
+    photo.style.left = `${rect.right + 10}px`;
+    photo.style.display = 'block';
   });
 
-  trigger.addEventListener("mouseleave", () => {
-    photo.style.display = "none";
-  });
-
-  photo.addEventListener("mouseenter", () => {
-    photo.style.display = "block";
-  });
-
-  photo.addEventListener("mouseleave", () => {
-    photo.style.display = "none";
+  triggerElement.addEventListener('mouseleave', () => {
+    photo.style.display = 'none';
   });
 </script>

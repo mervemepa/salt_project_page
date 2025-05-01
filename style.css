@@ -278,9 +278,7 @@ iframe {
 
 #profile-photo {
   position: absolute;
-  top: 60px;
-  right: 30px;
-  width: 180px;
+  width: 220px;
   height: auto;
   display: none;
   border: 1px solid #ccc;
