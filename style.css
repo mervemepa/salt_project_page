@@ -252,3 +252,26 @@ iframe {
   max-width: 100%;
   border: none;
 }
+
+.install-image {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin: 10px 0 5px 0;
+  /* Üstten 10px, alttan 5px boşluk */
+}
+
+.install-description,
+.install-credits {
+  margin-top: 10px;
+  /* Eskiden 30px'ti, azaltıldı */
+  font-size: 14px;
+  line-height: 1.6;
+}
