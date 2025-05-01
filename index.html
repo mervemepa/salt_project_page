@@ -18,9 +18,10 @@
    
 
     <!-- About Bölümü -->
-    <p class="about-text">
-    Hi, I'm Merve 
-    </p>
+  <p class="about-text">
+    Hi, I'm Merve <span class="photo-trigger">[?]</span>
+  </p>
+
     <p class="about-text">
     I work with systems of memory, collective gestures, and quiet technologies.
     </p>
@@ -58,7 +59,30 @@
 
   <script src="script.js"></script>
   <img id="category-preview" src="" alt="Preview Image">
+  <img src="assets/images/merve.jpeg" id="profile-photo" alt="Merve Mepa Portrait" />
+
 
 </body>
 
 </html>
+
+<script>
+  const trigger = document.querySelector(".photo-trigger");
+  const photo = document.getElementById("profile-photo");
+
+  trigger.addEventListener("mouseenter", () => {
+    photo.style.display = "block";
+  });
+
+  trigger.addEventListener("mouseleave", () => {
+    photo.style.display = "none";
+  });
+
+  photo.addEventListener("mouseenter", () => {
+    photo.style.display = "block";
+  });
+
+  photo.addEventListener("mouseleave", () => {
+    photo.style.display = "none";
+  });
+</script>

@@ -275,3 +275,25 @@ iframe {
   font-size: 14px;
   line-height: 1.6;
 }
+
+#profile-photo {
+  position: absolute;
+  top: 60px;
+  right: 30px;
+  width: 180px;
+  height: auto;
+  display: none;
+  border: 1px solid #ccc;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.photo-trigger {
+  cursor: pointer;
+  color: blue;
+}
+
+.photo-trigger:hover+#profile-photo,
+.photo-trigger:focus+#profile-photo {
+  display: block;
+}
